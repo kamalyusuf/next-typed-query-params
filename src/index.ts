@@ -15,3 +15,5 @@ export const useQueryParams = <T extends string>(
     }, {});
   }, [paths, query]);
 };
+
+export const useTypedQueryParams = useQueryParams;
