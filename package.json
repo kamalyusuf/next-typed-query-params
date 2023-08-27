@@ -1,6 +1,6 @@
 {
   "name": "next-typed-query-params",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "typed query params for nextjs",
   "main": "lib/index.mjs",
   "module": "lib/index.mjs",
