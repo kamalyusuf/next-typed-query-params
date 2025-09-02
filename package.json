@@ -1,6 +1,6 @@
 {
   "name": "next-typed-query-params",
-  "version": "1.0.4",
+  "version": "2.0.0",
   "description": "typed query params for nextjs",
   "repository": "https://github.com/kamalyusuf/next-typed-query-params.git",
   "publishConfig": {
