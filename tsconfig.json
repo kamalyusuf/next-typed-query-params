@@ -1,24 +1,22 @@
 {
   "compilerOptions": {
     "rootDir": "src",
-    "outDir": "lib",
-    "target": "ES2015",
+    "outDir": "dist",
+    "target": "ES2022",
     "lib": ["DOM", "ESNext"],
     "module": "ESNext",
-    "moduleResolution": "Node",
-    "jsx": "react",
+    "moduleResolution": "bundler",
+    "jsx": "react-jsx",
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "noEmitOnError": true,
     "allowJs": false,
-    "baseUrl": ".",
     "strict": true,
     "declaration": true,
-    "declarationMap": true,
-    "declarationDir": "lib",
-    "composite": true
+    "declarationMap": false,
+    "composite": false
   },
-  "exclude": ["node_modules", "lib"],
-  "include": ["src"]
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
 }

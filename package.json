@@ -2,34 +2,42 @@
   "name": "next-typed-query-params",
   "version": "1.0.4",
   "description": "typed query params for nextjs",
-  "main": "lib/index.mjs",
-  "module": "lib/index.mjs",
-  "types": "lib/index.d.ts",
   "repository": "https://github.com/kamalyusuf/next-typed-query-params.git",
   "publishConfig": {
     "access": "public"
   },
   "files": [
-    "lib",
-    "src"
+    "dist"
   ],
+  "type": "module",
   "exports": {
-    "import": "./lib/index.mjs"
+    "./app": {
+      "types": "./dist/app/index.d.ts",
+      "import": "./dist/app/index.js"
+    },
+    "./pages": {
+      "types": "./dist/pages/index.d.ts",
+      "import": "./dist/pages/index.js"
+    }
   },
+  "types": "./dist/types.d.ts",
   "author": "Kamal Yusuf",
   "license": "MIT",
   "scripts": {
-    "build": "tsup src/index.ts --format esm --dts-resolve --out-dir lib"
+    "build": "tsup",
+    "typecheck": "tsc --noEmit"
   },
   "peerDependencies": {
-    "next": ">=12.0.0",
+    "next": ">=13.0.0",
     "react": ">=16.8.0"
   },
   "devDependencies": {
-    "@types/react": "^18.2.21",
-    "next": "^13.4.19",
-    "react": "^18.2.0",
-    "tsup": "^7.2.0",
-    "typescript": "5.2.2"
-  }
+    "@types/react": "^19.1.12",
+    "next": "^15.5.2",
+    "prettier": "^3.6.2",
+    "react": "^19.1.1",
+    "tsup": "^8.5.0",
+    "typescript": "5.9.2"
+  },
+  "packageManager": "yarn@4.8.1+sha512.bc946f2a022d7a1a38adfc15b36a66a3807a67629789496c3714dd1703d2e6c6b1c69ff9ec3b43141ac7a1dd853b7685638eb0074300386a59c18df351ef8ff6"
 }
